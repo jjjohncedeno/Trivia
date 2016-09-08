@@ -37,7 +37,7 @@ div.game a.button {
     cursor: pointer;
     display: inline-block;
     color: white;
-    background: #3787e0;
+    background: #CA2222;
     border-radius: 8px;
     line-height: 35px;
     height: 35px;
@@ -58,7 +58,7 @@ div.game a.button {
 
 div.game a.button:hover {
     color: white;
-    background: #3787e0;
+    background: #CA2222;
 }
 
 div.game a.button:active {

@@ -17,6 +17,7 @@ div.game {
     height: 540px;
     background-size: cover;
     margin: 0 auto;
+    margin-top: 70px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
     padding: 0;
@@ -36,8 +37,8 @@ div.game div.logo1 {
 div.game a.button {
     cursor: pointer;
     display: inline-block;
-    color: white;
-    background: #3787e0;
+    color: black;
+    background: #CA2222;
     border-radius: 8px;
     line-height: 35px;
     height: 35px;
@@ -57,8 +58,8 @@ div.game a.button {
 }
 
 div.game a.button:hover {
-    color: white;
-    background: #3787e0;
+    color: black;
+    background: #CA2222;
 }
 
 div.game a.button:active {
