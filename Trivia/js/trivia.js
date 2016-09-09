@@ -37,7 +37,8 @@ var game = new function () {
     var statistic = {};
     var start_time;
     var current_time;
-
+    var contQuiz=0;
+    var numQuestion=5;
     /* -----------------------  LOADING ------------------------- */
 
     this.reloadStyles = function () {
@@ -112,6 +113,7 @@ var game = new function () {
         var maxScore = 0;
         var answeredScore = 0;
         var answeredScore_quiz = 0;
+
         for (var k in answers) {
             answeredCount++;
             answeredScore += answers[k];
@@ -119,7 +121,6 @@ var game = new function () {
                 answeredScore_quiz += answers[k];
             }
             maxScore += answersMaxScore[k];
-
         }
         gameScore = answeredScore;
         instance.onUpdateScore(gameScore);
@@ -190,6 +191,8 @@ var game = new function () {
     /* -----------------------  STEP-3 Questions ------------------------- */
 
     function nextQuestion() {
+      if (contQuiz<numQuestion){
+        contQuiz++;
         if (!empty(questions['q' + questionIndex])) {
             gameTime_question=0;
             startTimer();
@@ -197,7 +200,12 @@ var game = new function () {
             questionShow(questionIndex);
         } else {
             finishGame();
+            contQuiz=0;
         }
+      }else{
+        finishGame();
+        contQuiz=0;
+      }
     }
 
     $(document).bind('endDraw', function () {
